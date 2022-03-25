@@ -21,8 +21,8 @@ Hey, here is my repository list:
 
 <!-- [django01]: https://github.com/khadafi0/WEB-Framework/tree/main/Django/DjangoT1.11_LTS -->
 
-[django01]: https://github.com/khadafi0/WEB-Framework/tree/main/Django/DjangoT1.11_LTS
-[django02]: https://github.com/khadafi0/WEB-Framework/tree/main/Django/DjangoT3.2_LTS
+[django01]: https://github.com/Akhadafi/WEB-Framework/tree/main/Django/DjangoT1.11_LTS
+[django02]: https://github.com/Akhadafi/WEB-Framework/tree/main/Django/DjangoT3.2_LTS
 
 Dive into the repos below. Welcome! ⛵️
 
