@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{judul}}</title>
+  </head>
+  <body>
+    <h1>{{judul}}</h1>
+    <a href="{% url 'blog:create' %}">Tambah Artikel</a>
+    <ol>
+      {% for artikel in object_list %}
+      <li>
+        <a href="{% url 'blog:detail' artikel.slug %}"
+          >{{artikel.judul}} - oleh : {{artikel.penulis}}</a
+        >
+      </li>
+      {% endfor %}
+    </ol>
+    <!-- apakah halaman ini ada pembagian halaman naya -->
+    {% if is_paginated %}
+    <!-- sebelumnya -->
+    <!-- apakah halaman ini ada halaman sebelumnya -->
+    {% if page_obj.has_previous %}
+    <a href="{% url 'blog:list' penulis page_obj.previous_page_number %}"
+      >&laquo</a
+    >
+    {% else %}
+    <span>&laquo</span>
+    {% endif %}
+
+    <!-- range -->
+    {% for i in paginator.page_range %}
+    <a href="{% url 'blog:list' penulis i %}">{{i}}</a>
+    {% endfor %}
+
+    <!-- sesudahnya -->
+    <!-- apakah halaman ini ada halaman sebelumnya -->
+    {% if page_obj.has_next %}
+    <a href="{% url 'blog:list' penulis page_obj.next_page_number %}">&raquo</a>
+    {% else %}
+    <span>&raquo</span>
+    {% endif %} {% endif %}
+  </body>
+</html>

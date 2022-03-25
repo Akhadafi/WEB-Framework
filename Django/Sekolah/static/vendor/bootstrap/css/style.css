@@ -1,0 +1,4754 @@
+/*
+Theme Name: Akademi
+Theme URI: http://akademi.ciuss.com
+Author URI: http://facebook.com/ciussgw
+Description: Tema khusus web sekolah dari Ciuss Creative
+Author: Ciuss Creative
+Version: 2.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: tema sekolah
+Copyright: (c) 2017 - Sekarang ciuss.com
+*/
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat/Montserrat-Regular.woff2) format("woff2"), url(fonts/Montserrat/Montserrat-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins/Poppins-Regular.woff2) format("woff2"), url(fonts/Poppins/Poppins-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins/Poppins-Bold.woff2) format("woff2"), url(fonts/Poppins/Poppins-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(fonts/Open_Sans/OpenSans-Bold.woff2) format("woff2"), url(fonts/Open_Sans/OpenSans-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+b,
+big,
+blockquote,
+body,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+u,
+ul,
+var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    line-height: 1.4;
+    text-align: left;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: 0 !important;
+}
+
+body {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Poppins, Arial, sans-serif;
+}
+
+img {
+    pointer-events: none;
+}
+
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.akademi {
+    width: 100%;
+    margin: 0 auto;
+    padding: 58px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.customize-partial-edit-shortcuts-shown .akademi {
+    width: calc(100% + 300px);
+}
+
+.header {
+    position: relative;
+    z-index: 100;
+}
+
+.akademi_menu {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.fade .akademi_menu {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.03);
+}
+
+.aka_nav {
+    display: inline-block;
+}
+
+.open_menu.fa {
+    position: fixed;
+    top: 17px;
+    left: 20px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    display: none;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+
+.nav .dd.accord li {
+    display: block !important;
+}
+
+.nav .dd.desktop {
+    height: 50px;
+    font-weight: 400;
+}
+
+.nav .dd.desktop li {
+    float: left;
+    display: block;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav .dd.desktop li.menu-item-has-children {
+    position: relative;
+}
+
+.nav .dd.desktop li.menu-item-has-children:after {
+    content: "\f067";
+    font: normal normal 10px/1 FontAwesome;
+    position: absolute;
+    top: 15px;
+    right: 8px;
+}
+
+.nav .dd.desktop li a {
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 50px;
+    font-family: Poppins;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.nav .dd.desktop li:nth-child(1) a {
+    border-radius: 0 0 28px 0;
+    padding: 0 28px;
+}
+
+.nav .dd.desktop li:nth-child(2) a {
+    border-radius: 28px 0 0 0;
+    padding: 0 20px 0 28px;
+}
+
+.nav .dd.desktop li.menu-item-has-children a {
+    padding: 0 22px 0 16px;
+}
+
+.nav .dd.desktop li a:hover {
+    text-decoration: none;
+}
+
+.nav .dd.desktop li ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 0;
+    display: none;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.05);
+}
+
+.nav .dd.desktop li:hover ul {
+    display: block;
+}
+
+.nav .dd.desktop li ul li,
+.nav .dd.desktop li ul li:nth-child(1) {
+    width: 200px;
+    text-align: left;
+    border-radius: 0 !important;
+    background: none;
+	word-wrap: break-word;
+}
+.nav .dd.desktop li ul li:nth-child(1) a,
+.nav .dd.desktop li ul li:nth-child(2) {
+	background: none;
+}
+
+.nav .dd.desktop li ul li ul li ul li ul li:hover ul li ul,
+.nav .dd.desktop li ul li ul li ul li:hover ul li ul,
+.nav .dd.desktop li ul li ul li:hover ul li ul,
+.nav .dd.desktop li ul li:hover ul li ul,
+.nav .dd.desktop li:hover ul li ul {
+    display: none;
+}
+
+.nav .dd.desktop li ul li ul li ul li ul li ul li:hover ul,
+.nav .dd.desktop li ul li ul li ul li ul li:hover ul,
+.nav .dd.desktop li ul li ul li ul li:hover ul,
+.nav .dd.desktop li ul li ul li:hover ul,
+.nav .dd.desktop li ul li:hover ul {
+    display: block;
+}
+
+.nav .dd.desktop li ul li ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.05);
+}
+
+.nav .dd.desktop li ul li.menu-item-has-children:after {
+    top: 13px;
+}
+
+.nav .dd.desktop li ul li a {
+    display: block;
+    position: relative;
+    margin: 0 !important;
+    font-size: 13px;
+    line-height: 40px;
+    white-space: wrap;
+    padding: 0 15px;
+    border-radius: 0 !important;
+}
+
+.nav .dd.desktop li ul li ul li.menu-item-has-children:after,
+.nav .dd.desktop li ul li.menu-item-has-children:after {
+    display: block !important;
+}
+
+.akademi_search {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    height: 32px;
+    width: 280px;
+    overflow: hidden;
+}
+
+.ps_input {
+    width: 140px;
+    padding: 0;
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 0;
+}
+
+.ps_input input {
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    line-height: 30px;
+    border: 0;
+    font-family: Poppins;
+    font-size: 13px;
+    background: none;
+}
+
+.ps_select {
+    width: 104px;
+    padding: 0;
+    margin: 0 -1px 0 0;
+    float: left;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 0;
+}
+
+.ps_select select {
+    padding: 0 10px;
+    line-height: 30px;
+    border: 0;
+    appearance: none;
+    font-family: Poppins;
+    font-size: 13px;
+    background: none;
+}
+
+.ps_button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    float: left;
+}
+
+.ps_button button {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    text-align: center;
+    line-height: 32px;
+    font-size: 13px;
+}
+
+.akademi_head {
+    position: relative;
+    height: 120px;
+}
+
+.head_area {
+    position: relative;
+    padding: 0 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.akademi_logo {
+    height: 60px;
+    float: left;
+    padding: 30px 40px 30px 0;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.akademi_logo a {
+    display: block;
+}
+
+.akademi_logo img {
+    height: 60px;
+    width: auto;
+}
+
+.akademi_sosial {
+    position: relative;
+    float: right;
+    padding: 35px 0;
+    margin: 0;
+}
+
+.akademi_sosial a {
+    display: inline-block;
+}
+
+.akademi_sosial .fa {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+    margin: 0 4px 4px 0;
+    border-radius: 30px;
+}
+
+.akademi_sosial a.web_wa {
+    display: inline-block;
+}
+
+.akademi_sosial a.mob_wa {
+    display: none;
+}
+
+.akademi_top {
+    position: relative;
+    height: 40px;
+}
+
+.sekilas {
+    position: absolute;
+    padding: 0 20px;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.akademi_today {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 20px;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.running {
+    width: 100%;
+    margin: 0;
+    display: block;
+    height: 40px;
+    z-index: 5;
+}
+
+.customize-partial-edit-shortcut-running_text {
+    left: 50%;
+}
+
+.tickercontainer {
+    height: 40px;
+}
+
+.mask {
+    height: 40px;
+    margin: 0;
+}
+
+ul.newstickers {
+    position: relative;
+    left: 100%;
+    width: 1300px !important;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.newstickers .customize-partial-edit-shortcut {
+    left: 50%;
+}
+
+ul.newstickers li {
+    float: left;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 0;
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+ul.newstickers a {
+    white-space: nowrap;
+    padding: 0;
+    font-weight: 400;
+}
+
+.spasi {
+    margin: 0 50px 0 0;
+}
+
+#akademilider {
+    min-height: 300px;
+}
+
+#akademilider img {
+    width: 100%;
+    height: auto;
+}
+
+.akademi_content {
+    margin: 0 auto;
+}
+
+#akasekolah {
+    padding: 0 0 30px;
+}
+
+.outer_top {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    z-index: 10;
+}
+
+.info_box {
+}
+
+.school_box {
+    padding: 30px 30px 30px 310px;
+    position: relative;
+}
+
+.school_box table {
+    width: 100%;
+}
+
+.info_box h3 {
+    font-size: 12px;
+}
+
+.info_box h3 span.re_info {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 26px;
+}
+
+.info_box h1 {
+    position: relative;
+    font-size: 30px;
+    line-height: 1.2;
+    padding: 0 60px 0 0;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.tab_time {
+    vertical-align: middle;
+    width: 120px;
+}
+
+#hours {
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    padding: 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: Open Sans;
+    letter-spacing: -0.7px;
+}
+
+.ontime {
+    width: 80px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    display: inline-block;
+}
+
+#secs {
+    width: 40px;
+    text-align: center;
+    background: rgba(247, 247, 247, 0.15);
+    display: inline-block;
+}
+
+.add_box {
+    padding: 0 30px;
+}
+
+.akademi_cont {
+    width: 250px;
+    float: left;
+    margin-top: -115px;
+    position: relative;
+    z-index: 10;
+}
+
+.get_photos {
+    margin: 0;
+    padding: 15px;
+    width: 220px;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.get_photos img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.get_names {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    color: #fff;
+    padding: 45px 20px 10px;
+    font-size: 13px;
+    line-height: 1.2;
+    z-index: 10;
+}
+
+.aka_editorial {
+    float: left;
+    width: calc(50% - 125px);
+}
+
+.ed_loop {
+    padding: 30px 30px 0;
+}
+
+.ed_box {
+    margin-bottom: 10px;
+}
+
+.ed_box span {
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 30px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.aka_quotes {
+    float: left;
+    width: calc(50% - 125px);
+}
+
+.quotes_loop {
+    padding: 30px 30px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.quotes_loop .fa {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.akademi_container {
+    max-width: 1290px;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.before_blocks {
+    margin: 0 -15px;
+    padding: 30px 0;
+}
+
+.big_block {
+    width: 75%;
+    float: left;
+}
+
+.primary_box {
+    width: 66%;
+    float: right;
+}
+
+.primary_in {
+    margin: 0 15px 15px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top_icon {
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+/* LATEST NEWS */
+
+.news_on {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.news_overlay {
+    padding: 230px 30px 30px;
+    z-index: 10;
+    background-image: linear-gradient(rgba(250, 250, 250, 0), rgba(250, 250, 250, 1));
+}
+
+.news {
+    font-size: 13px;
+}
+
+.news h4 {
+    font-size: 25px;
+    font-family: Poppins;
+    font-weight: 700;
+}
+
+.news.owl-theme .owl-nav.disabled + .owl-dots {
+    position: absolute;
+    top: 4px;
+    right: 15px;
+    margin-top: 0;
+}
+
+.news.owl-theme .owl-dots .owl-dot span {
+    margin: 5px 0 5px 3px;
+    border-radius: 0;
+    background: #222;
+}
+
+.news.owl-theme .owl-dots .owl-dot:hover span {
+    background: #fff;
+}
+
+.news .item {
+    overflow: hidden;
+    position: relative;
+}
+
+.news img {
+    display: block;
+    height: auto;
+}
+
+.top_icon .fa {
+    width: 20px;
+}
+
+/* AGENDA */
+
+.agenda_box {
+    padding: 0;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.agenda_on {
+    margin: 0;
+}
+
+.aka_style {
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.star {
+    float: left;
+    padding: 0 15px;
+    margin: 0 0 0 -15px;
+    border-radius: 0 0 18px 0;
+}
+
+.afstar {
+    float: left;
+    width: 20px;
+    height: 36px;
+}
+
+.instar {
+    border-radius: 22px 0 0 0;
+    width: 20px;
+    height: 36px;
+    display: block;
+}
+
+.next_star {
+    float: right;
+}
+
+.agenda_loop {
+    width: 50%;
+    float: left;
+    height: 90px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.agenda_loop.noagenda {
+    width: 100%;
+    float: none;
+    height: auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+.age_inner {
+    padding: 15px;
+    height: 60px;
+}
+
+.agenda_loop.noagenda .age_inner {
+    height: auto;
+}
+
+.age_date {
+    float: right;
+    margin-left: 15px;
+    text-align: center;
+    width: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.eventdate {
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.eventmonth {
+    font-size: 11px;
+    line-height: 2;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.age_inner h3 {
+    font-size: 12px;
+}
+
+.age_inner span a {
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* GURU */
+
+.guru_block {
+    margin: 0 15px 15px;
+    padding: 15px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box_guru {
+    position: relative;
+    margin: 0 15px 15px;
+}
+
+.guru_image {
+    float: left;
+    width: 100px;
+    padding: 0 15px 0 0;
+}
+
+.guru_image img {
+    width: 100%;
+    height: auto;
+}
+
+.guru_detail {
+    float: right;
+    width: calc(100% - 115px);
+}
+
+.guru_nama {
+    margin: 0 0 15px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.guru_status {
+    font-size: 12px;
+    line-height: 22px;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.1);
+}
+
+.guru_l {
+    float: left;
+}
+
+.guru_r {
+    float: right;
+}
+
+.guru_pro {
+    padding: 15px 0 0;
+}
+
+.guru_block .guru_pro a {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.nodata {
+    text-align: center;
+}
+
+/* FASILITAS */
+
+.fasilitas_box {
+    padding: 0;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #d33;
+}
+
+.block_fas img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.loop_fas {
+    padding: 15px;
+}
+
+.the_fas {
+    width: 25%;
+    float: left;
+}
+
+/* SECONDARY */
+
+.secondary {
+    width: 34%;
+    float: left;
+}
+
+/* PENGUMUMAN */
+
+.peng_box {
+    position: relative;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.1);
+}
+
+.peng_post {
+    padding: 0;
+}
+
+.peng_post h3 {
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+}
+
+.peng_post h3 span.re_peng {
+    display: inline-block;
+    padding: 0;
+}
+
+.peng_in {
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.1);
+}
+
+.peng_in a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* GURU BLOG */
+
+.blog_gurus {
+    padding: 0;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog_loop {
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+    width: 100%;
+    height: 90px;
+}
+
+.loop_box {
+    padding: 15px;
+    height: 60px;
+    border-right: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.minithumb {
+    float: left;
+    margin-right: 15px;
+}
+
+.loop_box h3 {
+    max-height: 35px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.blog_writer {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+/* FASILITAS */
+
+.prestasi_box {
+    padding: 0;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #444;
+    border-bottom: 4px solid #d33;
+}
+
+.prestasi_on {
+    margin: 0;
+}
+
+.prestasi_loop {
+    height: 90px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.akademi_inner {
+    padding: 15px;
+    height: 60px;
+}
+
+.akademi_inner h3 {
+    font-size: 12px;
+    max-height: 40px;
+}
+
+.akademi_inner span {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+/* RIGHT BOX */
+
+.right_block {
+    width: 25%;
+    float: right;
+}
+
+.ekskul_box {
+    padding: 0;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ekskul_inner {
+    padding: 15px;
+}
+
+.re_kegiatan {
+    float: right;
+}
+
+.ekskul_on {
+    margin: 0;
+}
+
+.ekskul_loop {
+    height: 90px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.ekskul_inner h3 a {
+    font-size: 12px;
+}
+
+.ekskul_inner span a {
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* GALERI */
+
+.gall_box {
+    padding: 0;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gall_head {
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.gall_loop {
+    padding: 15px;
+}
+
+.gal_thumb {
+    width: 33.3333%;
+    float: left;
+}
+
+.gal_thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.loop_thumb {
+    width: 33.3333%;
+    float: right;
+    margin-left: 15px;
+}
+
+.loop_thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* VIDEO GALERI */
+
+.video_box {
+    padding: 0 0 15px;
+    margin: 0 15px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aka_video {
+    padding: 15px 15px 0;
+}
+
+.aka_video iframe {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+/* BREADCRUMB */
+
+.akademi_bread {
+    padding: 40px;
+    position: relative;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    box-shadow: 0 0 15px inset rgba(0, 0, 0, 0.05);
+}
+
+.akademi_bread:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.bread_inner {
+    position: relative;
+    z-index: 5;
+}
+
+.breadcrumbs {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.akademi_heading {
+    font-size: 30px;
+    line-height: 1.3;
+    font-family: Montserrat;
+    padding: 30px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* LOOP ARCHIVE */
+
+.loop_akademi {
+    margin: 0 -15px;
+    padding: 30px 0;
+}
+
+.loop_left {
+    width: 70%;
+    float: left;
+}
+
+.post_loop {
+    margin: 0 15px;
+}
+
+.loop_right {
+    width: 30%;
+    float: left;
+}
+
+.post_in {
+    margin: 0 0 50px;
+}
+
+.post_inthumb {
+    width: 40%;
+    float: left;
+}
+
+.post_inthumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.post_inmeta {
+    width: calc(60% - 30px);
+    float: right;
+}
+
+.post_inmeta.no_result {
+    width: 100%;
+    float: none;
+}
+
+.post_in h2 {
+    font-size: 25px;
+    line-height: 1.3;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.post_inpublish {
+    font-size: 13px;
+    padding: 5px 0 10px;
+}
+
+.post_inexcerpt {
+    font-size: 14px;
+}
+
+.post-category {
+    margin: 0 0 15px;
+}
+
+.post-category a {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    margin: 0 10px 0 0;
+    border-radius: 30px;
+}
+
+.age_arsip {
+    width: 200px;
+    float: left;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.agedate {
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.agemonth {
+    font-size: 20px;
+    line-height: 2;
+    text-transform: uppercase;
+    font-family: Montserrat;
+}
+
+.post_inmeta.age_meta {
+    width: calc(100% - 240px);
+    float: right;
+}
+
+/* GTK LOOP */
+
+.loop_guru {
+    width: 20%;
+    float: left;
+}
+
+.loop_guru .post_in {
+    margin: 0 15px;
+}
+
+.post_inguru {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.post_inguru img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.post_inguru .fa {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -25px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 30px;
+    z-index: 5;
+}
+
+.post_inguru a {
+    display: block;
+}
+
+.guru_meta {
+    height: 100px;
+}
+
+.post_gurulink {
+    text-align: center;
+    font-size: 16px;
+}
+
+.guru_fullname {
+    display: block;
+    line-height: 1.3;
+    margin: 0 0 5px;
+}
+
+.stts,
+.jab {
+    font-size: 12px;
+    padding: 0 8px;
+    line-height: 20px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+/* EKSKUL */
+
+.loop_more {
+    padding: 15px 0;
+}
+
+.loop_more a {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+/* DOWNLOAD LOOP */
+
+.before_table {
+    margin: 0 -15px;
+}
+
+.loop_download {
+    padding: 30px 15px;
+}
+
+.loop_download .pagination {
+    margin: 0;
+}
+
+.search_something {
+    padding: 0;
+    width: 30%;
+    float: right;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.some_input {
+    margin: 0;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.some_input span {
+    height: 34px;
+    line-height: 34px;
+    width: 60px;
+    float: left;
+}
+
+.some_input input {
+    float: right;
+    width: calc(100% - 110px);
+    height: 34px;
+    line-height: 34px;
+    border: 0;
+    padding: 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: Poppins;
+}
+
+.some_result {
+    padding: 20px 30px;
+    margin: 0;
+}
+
+.ajax_down {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ajax_down:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.ajax_box {
+    float: left;
+}
+
+.down_down {
+    float: right;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+.some_cat {
+    margin: 0;
+    padding: 0;
+}
+
+.some_cat .cat_term a {
+    display: block;
+    padding: 15px 30px;
+}
+
+.some_cat span {
+    float: right;
+    padding: 0 15px;
+    display: inline-block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.head_cat {
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.result_list {
+    width: 70%;
+    float: left;
+}
+
+.down_table {
+    margin: 0 30px 0 0;
+}
+
+.akademi_table {
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+}
+
+.akademi_table .top_tab {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.akademi_table td {
+    margin: 0 0 -1px -1px;
+    padding: 15px 20px;
+}
+
+.akademi_table td.tdcol {
+    text-align: center;
+}
+
+.akademi_table td.tdcol .fa {
+    font-size: 20px;
+}
+
+.akademi_table td.jum {
+    width: 20px;
+    text-align: center;
+}
+
+.akademi_table span.size {
+    font-size: 11px;
+}
+
+/* SISWA */
+
+.result_siswa {
+    width: 100%;
+}
+
+.result_siswa td {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+/* LOOP QUOTES */
+
+.akademi_quotes {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.text_quotes {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.people_quotes {
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+.quotes_page .pagination {
+    margin: 0;
+}
+
+/* PAGINATION */
+
+.pagination {
+    padding: 30px 0;
+    margin: 0 15px;
+    font-size: 13px;
+    clear: both;
+    position: relative;
+}
+
+.pagination a.nextpostslink,
+.pagination a.previouspostslink {
+    margin: 10px 2px 10px 0;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+}
+
+.pagination .disabled,
+.pagination a {
+    margin: 10px 2px 10px 0;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+}
+
+/* SINGLE POST */
+
+.single .akademi_heading {
+    padding: 0;
+    border: 0;
+}
+
+.page .akademi_heading {
+    padding: 0 0 30px;
+    margin: 0 0 20px;
+}
+
+.after_title {
+    font-size: 12px;
+    padding: 10px 0;
+    margin: 0 0 15px;
+}
+
+.akademi_singlepost {
+    position: relative;
+    z-index: 10;
+}
+
+.akademi_singlecontent {
+    margin: 0 -15px;
+}
+
+.akademi_primary {
+    width: 65%;
+    float: left;
+}
+
+.akademi_primary.primary_full {
+    width: calc(100% - 90px);
+    float: none;
+}
+
+.primary_content {
+    margin: 0 15px;
+    padding: 30px 0;
+}
+
+.content_thumbnail {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 25px;
+}
+
+.primary_content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.akademi_article {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.akademi_article p {
+    margin: 0 0 15px;
+}
+
+.akademi_article img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 20px;
+}
+
+.akademi_article img.alignleft {
+    float: left;
+    margin: 0 30px 20px 0;
+}
+
+.akademi_article img.alignright {
+    float: right;
+    margin: 0 0 20px 30px;
+}
+
+.akademi_article .akademi__list-image img {
+    margin: 0;
+}
+
+.akademi_article blockquote {
+    margin: 0 0 20px;
+    padding: 20px 20px 10px 50px;
+    background: rgb(0, 0, 0, 0.05);
+}
+
+.akademi_article ul {
+    margin: 0 0 20px;
+    list-style: disc !important;
+}
+
+.akademi_article ol {
+    margin: 0 0 20px;
+    list-style: decimal !important;
+}
+
+.akademi_article li {
+    margin: 0 0 0 15px;
+}
+
+.akademi_article li ol,
+.akademi_article li ul {
+    margin: 0;
+}
+
+/* SINGLE AGENDA */
+
+.age_meta h1.akademi_heading {
+    padding-top: 8px;
+}
+
+.age_single {
+    padding: 6px 0;
+    font-size: 12px;
+    font-family: Montserrat;
+}
+
+.age_single.age_top {
+    border: 1px solid rgba(125, 125, 125, 0.15);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 8px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.age_single .fa {
+    width: 20px;
+    text-align: center;
+}
+
+.event_box {
+    margin: 0 0 30px;
+}
+
+.event_maps iframe {
+    width: 100%;
+    height: 300px;
+    margin: 0 0 30px;
+}
+
+/* SINGLE DOWNLOAD */
+
+.akademi_heading.only_single {
+    padding: 0 0 15px;
+    margin-bottom: 15px;
+}
+
+.single-download .akademi_heading {
+    font-size: 30px;
+    line-height: 1.3;
+    font-family: Montserrat;
+    padding: 30px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* SINGLE GALERI */
+
+#gallery-1 img,
+#gallery-2 img,
+#gallery-3 img,
+#gallery-4 img {
+    border: 0 !important;
+}
+
+/* SINGLE GTK */
+
+.table_inakademi {
+    width: 100%;
+}
+
+.table_inakademi td {
+    padding: 8px 20px;
+}
+
+.table_inakademi td .fa {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.mini_icon {
+    width: 20px;
+}
+
+.per_tiga {
+    width: 33.33%;
+    float: left;
+}
+
+.guru_data {
+    margin: 0 -15px;
+}
+
+.per_dua {
+    width: 50%;
+    float: left;
+}
+
+.guru_table {
+    margin: 0 15px;
+    width: calc(100% - 30px);
+}
+
+.guru_table td {
+    padding: 12px 20px 12px 0;
+    border-top: 1px solid #ddd;
+}
+
+.people .akademi_secondary {
+    float: left;
+    width: 360px;
+}
+
+.people .secondary_content {
+    margin: 30px 15px;
+}
+
+.people .akademi_primary {
+    float: right;
+    width: calc(100% - 360px);
+}
+
+.people .table_inakademi td {
+    padding: 12px 20px 12px 0;
+}
+
+.art_title {
+    padding: 10px 0;
+}
+
+.art_title span {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+    display: inline-block;
+}
+
+.front_td {
+    width: 50%;
+}
+
+/* SINGLE MATERI */
+
+.single-materi .akademi_heading {
+    padding: 30px 0;
+}
+
+.materi_outer {
+    margin: 0;
+    padding: 0 0 30px 0;
+}
+
+.akademi_kelas {
+    width: 15%;
+    float: left;
+    padding: 15px 0;
+}
+
+.kelas_cat {
+    padding: 0;
+}
+
+.oc_class {
+    display: none;
+}
+
+.kelas_head {
+    display: block;
+}
+
+.kelas_head .to_materi {
+    margin-bottom: 20px;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 12px;
+}
+
+.tugas_term {
+    line-height: 40px;
+    height: 40px;
+    position: relative;
+    padding: 0 15px;
+    margin: 0 -1px -1px -1px;
+    display: block;
+}
+
+.tugas_term span {
+    float: right;
+    text-align: center;
+    margin: 9px 0;
+    padding: 0 12px;
+    line-height: 22px;
+    height: 22px;
+    font-size: 11px;
+}
+
+.akademi_materi {
+    width: 65%;
+    float: left;
+}
+
+.materi_box {
+    margin: 15px 0;
+    padding: 30px;
+}
+
+.materi_box h3 {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.materi_stat {
+    padding: 15px 0;
+}
+
+/* MATERI LOGIN */
+
+.akademi_login {
+    width: 20%;
+    float: right;
+}
+
+.login_in {
+    padding: 15px 0 15px 30px;
+}
+
+.log_open {
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 20px;
+}
+
+.log_close {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.log_user {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.log_photo img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.log_name {
+    margin-bottom: 10px;
+}
+
+a.login_button {
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 12px;
+}
+
+a.logout_button {
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 12px;
+}
+
+#register {
+    display: none;
+}
+
+.ajax-auth {
+    position: relative;
+    text-align: center;
+}
+
+.ajax-auth h3 {
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.inform {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.ajax-auth p.status {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 13px;
+    display: none;
+}
+
+.logajax {
+    position: relative;
+    margin: 0 0 25px;
+}
+
+.ajax-auth input.submit_button {
+    font-size: 15px;
+    padding: 0 30px;
+    margin: 0 0 15px;
+    border: 0;
+    height: 36px;
+    line-height: 36px;
+    font-family: Poppins, sans-serif;
+}
+
+.ajax-auth input#username,
+.ajax-auth input#password,
+.ajax-auth input#signonname,
+.ajax-auth input#email,
+.ajax-auth input#signonpassword,
+.ajax-auth input#password2 {
+    border: 0;
+    font-size: 13px;
+    width: calc(100% - 22px);
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    height: 25px;
+    line-height: 25px;
+    padding: 3px 10px;
+}
+
+.ajax-auth input.error {
+    border: 1px solid #ff0000 !important;
+}
+
+.forg {
+    text-align: center;
+}
+
+.soal_kumpulan {
+    padding: 30px 0;
+}
+
+.soal_box {
+    margin-bottom: 20px;
+}
+
+.per_materi {
+    width: 80px;
+    height: 70px;
+    border-radius: 5px;
+    margin-top: 4px;
+    margin-right: 20px;
+    float: left;
+}
+
+.per_count {
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.per_span {
+    font-size: 14px;
+    text-align: center;
+}
+
+.det_materi {
+    float: right;
+    width: calc(100% - 105px);
+    padding-bottom: 30px;
+}
+
+.det_materi h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.akademi_mat {
+    margin-bottom: 10px;
+}
+
+.det_mapel {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.det_kelas {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.mat_author {
+    text-align: right;
+}
+
+.mat_by {
+    width: calc(100% - 45px);
+    float: left;
+    font-size: 11px;
+}
+
+.mat_avatar {
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-left: 15px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.mat_avatar img {
+    width: 100%;
+    height: auto;
+}
+
+.soal_tab {
+    width: 100%;
+}
+
+.soal_tab .ask {
+    padding: 15px 0 10px;
+    border-top: 1px solid rgba(125, 125, 125, 0.1);
+}
+
+.soal_tab .answer {
+    padding: 0 0 15px;
+    width: 25%;
+    float: left;
+}
+
+.close_materi {
+    text-align: center;
+    padding: 150px 0 250px;
+}
+
+.close_materi h3 {
+    font-weight: 400;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.close_materi span {
+    font-weight: 700;
+}
+
+/* SINGLE VIDEO */
+
+.single_vid {
+    width: 100%;
+    height: 350px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.ano_vid iframe {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+}
+
+/* SINGLE BLOG EDITORIAL */
+
+.blog_auth {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    text-align: center;
+    margin: -60px auto 20px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.blog_auth img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px;
+}
+
+.auth_name {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 0 25px;
+}
+
+/* COMMENTS */
+
+.akademi__post {
+    padding: 50px 0;
+}
+
+.akademi__post .fa-commenting-o {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-right: 30px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 6px;
+}
+
+.have_comment {
+    float: right;
+    width: calc(100% - 80px);
+}
+
+.comment_heads {
+    font-size: 18px;
+}
+
+.comments h3 {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#comments {
+    margin-bottom: 30px;
+}
+
+.comment_list {
+    margin: 0 0 40px;
+}
+
+.comment__avatar {
+    float: left;
+    margin: 0 30px 0 80px;
+}
+
+.comment__avatar img {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.comment__meta {
+    width: calc(100% - 218px);
+    float: right;
+    margin-bottom: 30px;
+    padding: 20px 30px 10px;
+    border: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.comment__author {
+    margin-bottom: 8px;
+}
+
+.comment__author em {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.comment__author a,
+.comment__author span {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.comment__author a:hover {
+    text-decoration: underline;
+}
+
+.comment-reply-link {
+    text-decoration: none;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.comment-reply-link:hover {
+    text-decoration: underline;
+}
+
+.comment-text p {
+    margin-bottom: 10px;
+}
+
+.heading_list_comment {
+    font-size: 22px;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+#author,
+#author:focus,
+#comment,
+#email,
+#email:focus,
+#url,
+#url:focus {
+    border: 0;
+    font-size: 13px;
+    font-family: Poppins;
+    outline: 0;
+}
+
+.children {
+    margin-left: 75px;
+}
+
+.children .children {
+    margin-left: 75px;
+}
+
+.children .comment {
+    padding-left: 0;
+}
+
+#respond p,
+.nopassword {
+    margin: 15px 0;
+}
+
+#respond p a {
+    text-decoration: none;
+}
+
+#respond p a:hover {
+    text-decoration: underline;
+}
+
+#commentform {
+    position: relative;
+    margin: 10px 0;
+    padding-top: 155px;
+}
+
+#respond .comment_message {
+    margin: 10px 0 25px;
+}
+
+#respond .akademi__form-author,
+#respond .akademi__form-email,
+#respond .akademi__form-url {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+#respond .akademi__form-textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+#respond .akademi__form-textarea > div {
+    border-radius: 4px;
+    padding: 0;
+}
+
+#respond p.form-submit {
+    margin-bottom: 0;
+}
+
+#respond p.form-submit #submit {
+    float: none;
+}
+
+#comment {
+    width: calc(100% - 30px);
+    height: 120px;
+    padding: 10px 14px;
+    margin: 0;
+    border: none;
+    overflow: auto;
+    font-family: Poppins;
+    font-size: 14px;
+}
+
+.akademi__form-author div,
+.akademi__form-email div,
+.akademi__form-url div {
+    padding: 0;
+}
+
+#author,
+#email,
+#url {
+    width: calc(100% - 30px);
+    padding: 10px 14px;
+}
+
+.akademi__form-url p {
+    margin-left: 15px !important;
+}
+
+.comment-reply-title {
+    font-weight: 400;
+}
+
+.comment-reply-title small {
+    font-size: 10px;
+}
+
+#submit {
+    border: none;
+    cursor: pointer;
+    padding: 7px 12px;
+    margin: 0 5px 5px 0;
+    font-size: 14px;
+    display: inline-block;
+    font-family: Poppins;
+}
+
+p#cancel-comment-reply {
+    float: right;
+    line-height: 28px;
+    margin: 0;
+}
+
+/* SHARE */
+
+.share {
+    position: absolute;
+    top: 30px;
+    left: auto;
+    margin-left: 845px;
+    width: 45px;
+    padding: 0 20px;
+}
+
+.single_full .share {
+    margin-left: 1240px;
+    padding: 0;
+}
+
+.share .fa {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s ease 0.1s;
+}
+
+.share .fa-share-alt {
+    background: #090;
+    color: #fff;
+    line-height: 35px;
+    position: relative;
+}
+
+.share .fa-share-alt:after {
+    content: "SHARE";
+    position: absolute;
+    bottom: -8px;
+    display: block;
+    width: 45px;
+    text-align: center;
+    font-size: 8px;
+    font-family: Poppins;
+}
+
+.share .fa-facebook {
+    background: #0f68c1;
+    color: #fff;
+}
+
+.share .fa-twitter {
+    background: #33bbff;
+    color: #fff;
+}
+
+.share .fa-whatsapp {
+    background: #22dd22;
+    color: #fff;
+}
+
+.share .fa-paper-plane-o {
+    background: #1188cc;
+    color: #fff;
+}
+
+.fade .share {
+    position: fixed;
+    top: 90px;
+    left: auto;
+    transition: all 0.5s ease 0.1s;
+}
+
+.fade.stuck .share {
+    position: absolute;
+    bottom: 30px;
+    top: auto;
+    left: auto;
+    transition: all 0.5s ease 0.1s;
+}
+
+/*SECONDARY */
+
+.akademi_secondary {
+    width: 35%;
+    float: right;
+}
+
+.secondary_content {
+    margin: 30px 15px 30px 105px;
+    padding: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.akademi_featured {
+    position: relative;
+}
+
+.akademi_featured:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 5;
+}
+
+.single-slider .akademi_featured:after {
+    display: none;
+}
+
+.akademi_featured img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.singmeta {
+    padding: 20px 30px;
+}
+
+.aka_tags {
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.aka_tags a {
+    padding: 7px 12px;
+    margin: 0 5px 5px 0;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.content_meta {
+    font-size: 15px;
+    margin: 0 0 20px;
+}
+
+.meta-icon {
+    float: left;
+}
+
+.meta_icon .fa {
+    margin-right: 5px;
+}
+
+.loop_meta {
+    padding: 15px 0;
+    border-top: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.loop_meta span {
+    font-size: 13px;
+}
+
+.loop_meta h4 {
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.loop_meta h4 a {
+    font-weight: 400;
+}
+
+.akademi_heads {
+    font-size: 22px;
+    padding: 10px 0 15px;
+}
+
+.wa_web {
+    display: block;
+}
+
+.wa_mob {
+    display: none;
+}
+
+/* SIDEBAR */
+
+#sidebar {
+    margin: 0 15px;
+}
+
+.widget {
+    position: relative;
+    clear: both;
+    padding: 0;
+    margin: 0 0 15px;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.07);
+}
+
+.widget h3 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 40px;
+    height: 40px;
+    font-family: Poppins;
+    text-align: right;
+    padding: 0 20px;
+    text-transform: uppercase;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.widget .star {
+    margin: 0 0 0 -20px;
+    border-radius: 0 0 26px 0;
+}
+
+.widget .instar {
+    border-radius: 28px 0 0 0;
+}
+
+.widget .star .fa {
+    margin-right: 4px;
+}
+
+.widget a,
+.widget-small a {
+    text-decoration: none;
+}
+
+.widget a:hover,
+.widget-small a:hover {
+    text-decoration: underline;
+}
+
+.widget label.screen-reader-text {
+    position: relative;
+    top: auto;
+    padding: 15px 0;
+    margin: 0 20px;
+    display: block;
+    height: auto;
+    width: calc(100% - 40px);
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+/* Wid Agenda */
+
+.agenda_widget {
+    padding: 20px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.agenda_widget:last-child {
+    border: 0;
+}
+
+.agenda_dt {
+    width: 60px;
+    margin-left: 20px;
+    overflow: hidden;
+    float: right;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.a_date {
+    width: 60px;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.a_month {
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 11px;
+}
+
+.agenda_info {
+    float: left;
+    width: calc(100% - 80px);
+}
+
+.agenda_info h5 {
+    font-size: 13px;
+}
+
+.wid_see {
+    font-style: italic;
+    font-size: 11px;
+    padding: 4px 0 0;
+}
+
+/* Wid Post */
+
+.post_widget {
+    padding: 20px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.post_widget:last-child {
+    border: 0;
+}
+
+.widget_thumb {
+    width: 80px;
+    height: 60px;
+    background: rgb(0, 0, 0, 0.2);
+    float: left;
+}
+
+.post_widinfo {
+    float: right;
+    width: calc(100% - 100px);
+}
+
+.post_widspan {
+    font-size: 12px;
+}
+
+/* Info Sekolah */
+
+.widget_sekolah {
+    padding: 20px;
+}
+
+.embed_found {
+    margin: 0 0 10px;
+}
+
+.sch_maps iframe {
+    width: 100%;
+    height: 250px;
+    margin: 0 0 10px;
+}
+
+.widget_sekolah h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.wid_num {
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 0 10px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_contact {
+    width: 100%;
+}
+
+.widget_contact tr {
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_contact td {
+    padding: 8px 0;
+}
+
+.widget_contact .schright {
+    text-align: right;
+}
+
+/* Wid Video */
+
+.vid_widbox {
+    padding: 20px 20px 0;
+}
+
+.vid_widbox:last-child {
+    padding: 20px;
+}
+
+.vid_widin iframe {
+    display: block;
+    width: 100%;
+    height: 180px;
+}
+
+/* Wid Arsip */
+
+.widget.widget_archive ul {
+    padding: 20px;
+}
+
+.widget select {
+    width: calc(100% - 40px);
+    font-size: 13px;
+    line-height: 30px;
+    padding: 0 15px;
+    border: 0;
+    font-family: Poppins;
+    appearance: none;
+    border: 1px solid rgba(125, 125, 125, 0.15);
+    margin: 20px;
+}
+
+/* Wid Audio */
+
+.widget_media_audio.widget {
+    padding: 20px;
+}
+
+.widget_media_audio.widget h3 {
+    margin: -20px -20px 20px;
+}
+
+/* Wid Search */
+
+.widget_search.widget {
+    padding: 20px;
+}
+
+.widget_search.widget h3 {
+    margin: -20px -20px 20px;
+}
+
+.widget .akademi_search select {
+    border: 0;
+    margin: 0;
+}
+
+.widget .akademi_search select * {
+    font-family: Poppins;
+}
+
+.widget .akademi_search {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.widget .akademi_search .ps_input,
+.widget .akademi_search .ps_select {
+    width: calc(50% - 16px);
+}
+
+.widget .akademi_search .ps_input input {
+    padding: 0 15px;
+    width: calc(50% - 32px);
+}
+
+/* Wid Galeri */
+
+.widget_media_gallery.widget {
+    padding: 20px;
+}
+
+.widget_media_gallery.widget h3 {
+    margin: -20px -20px 20px;
+}
+
+.widget .gallery {
+    margin: 0 -5px !important;
+}
+
+.widget .gallery .gallery-item {
+    float: left;
+    margin: 0 !important;
+    text-align: center;
+}
+
+.widget .gallery.gallery-columns-1 .gallery-item {
+    width: 100% !important;
+}
+
+.widget .gallery.gallery-columns-2 .gallery-item {
+    width: 50% !important;
+}
+
+.widget .gallery.gallery-columns-3 .gallery-item {
+    width: 33.333% !important;
+}
+
+.widget .gallery.gallery-columns-4 .gallery-item {
+    width: 25% !important;
+}
+
+.widget .gallery.gallery-columns-6 .gallery-item {
+    width: 16.16777% !important;
+}
+
+.widget .gallery.gallery-columns-8 .gallery-item {
+    width: 12.5% !important;
+}
+
+.widget .gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none !important;
+    margin-bottom: 0;
+}
+
+.widget .gallery .gallery-caption {
+    font-size: 12px;
+    margin: 0 6px 14px;
+}
+
+.widget .gallery dl {
+    margin: 0;
+}
+
+.widget .gallery dl dt {
+    margin: 5px;
+}
+
+.widget .gallery br + br {
+    display: none;
+}
+
+.widget_media_image.widget img {
+    max-width: 100%;
+    height: auto;
+}
+
+.widget .wp-caption {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+    max-width: 100%;
+}
+
+.widget .wp-caption img {
+    margin: 0;
+}
+
+.widget .wp-caption p.wp-caption-text {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.widget .wp-smiley {
+    margin: 0;
+}
+
+/* Wid Image */
+
+.widget_media_image.widget {
+    padding: 20px;
+}
+
+.widget_media_image.widget h3 {
+    margin: -20px -20px 20px;
+}
+
+.widget_media_image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Widget Text HTML */
+
+.widget_text.widget {
+    padding: 20px;
+}
+
+.widget_text.widget h3 {
+    margin: -20px -20px 20px;
+}
+
+.widget_text p {
+    margin: 0 0 15px;
+}
+
+.widget_text ul {
+    margin: 0 0 15px;
+    list-style: square outside none;
+}
+
+.widget_text ol {
+    margin: 0 0 15px;
+    list-style: decimal outside none;
+}
+
+.widget_text blockquote,
+.widget_text q {
+    background: rgb(0, 0, 0, 0.05);
+    padding: 15px 15px 15px 40px;
+    margin: 0 0 15px;
+}
+
+/* Kalender */
+
+.widget_calendar.widget {
+    padding: 20px;
+}
+
+.widget_calendar.widget h3 {
+    margin: -20px -20px 20px;
+}
+
+.calendar_wrap {
+    padding: 0;
+    border-top: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.calendar_wrap table {
+    width: 100%;
+}
+
+.calendar_wrap table caption {
+    padding: 10px;
+}
+
+.calendar_wrap th {
+    margin: 0 -1px -1px 0;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 700;
+    border: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.calendar_wrap td {
+    margin: 0 -1px -1px 0;
+    text-align: center;
+    padding: 6px 0;
+    font-weight: 400;
+    border: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.wp-calendar-nav {
+    padding: 10px 15px;
+}
+
+.wp-calendar-nav-prev {
+    float: left;
+}
+
+.wp-calendar-nav-next {
+    float: right;
+}
+
+.widget_categories ul,
+.widget_recent_comments ul,
+.widget_pages ul,
+.widget_nav_menu ul.menu,
+.widget_meta ul,
+.widget_recent_entries ul,
+.widget_pages ul {
+    padding: 20px;
+    margin: 0;
+}
+
+.widget ul li ul.sub-menu {
+    padding: 0;
+    margin: 0 0 -1px 15px;
+    border-top: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget.widget_archive li,
+.widget.widget_categories li,
+.widget.widget_meta li,
+.widget.widget_nav_menu li,
+.widget.widget_pages li {
+    line-height: 2.6;
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget.widget_recent_entries li {
+    line-height: 1.4;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_recent_entries .post-date {
+    font-size: 12px;
+}
+
+.widget.widget_recent_comments li {
+    line-height: 1.4;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_recent_comments .post-date {
+    font-size: 12px;
+}
+
+/* RSS */
+
+.widget_rss.widget {
+    padding: 20px;
+}
+
+.widget_rss.widget h3 {
+    margin: -20px -20px 20px;
+}
+
+.widget.widget_rss li {
+    line-height: 1.4;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_rss .rssSummary {
+    padding: 8px 0 0;
+    font-size: 12px;
+}
+
+.widget_rss cite {
+    padding: 12px 0 0;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    color: #d33;
+}
+
+.widget_rss .rss-date {
+    font-size: 12px;
+}
+
+/* Tag */
+
+.widget_tag_cloud .tagcloud {
+    padding: 20px;
+}
+
+.tagcloud a {
+    margin: 0 4px 6px 0;
+    padding: 0 12px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    font-size: 13px !important;
+}
+
+/* Video */
+
+.widget_media_video.widget {
+    padding: 20px;
+}
+
+.widget_media_video h3 {
+    margin: -20px -20px 20px;
+}
+
+#footerbar {
+    padding: 0 0 50px;
+    position: relative;
+    font-size: 13px;
+    z-index: 10;
+}
+
+.customize-partial-edit-shortcuts-shown #footerbar {
+    width: calc(100% + 300px);
+}
+
+.widget__footer {
+    margin: 0 -15px;
+    padding: 30px 0;
+}
+
+.footer__block {
+    width: 25%;
+    float: left;
+}
+
+.footer__block-inner {
+    margin: 0 15px;
+}
+
+.footbar {
+    position: relative;
+    clear: both;
+    padding: 0;
+    margin: 0 0 25px;
+}
+.footbar .widget {
+	box-shadow: 0 0 0  #fff;
+}
+
+.footbar h3,
+.footbar h2.widgettitle {
+    margin: 0;
+    font-weight: 400;
+    line-height: 50px;
+    height: 50px;
+    font-size: 22px;
+    font-family: Montserrat;
+    text-align: left;
+    padding: 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.footbar .star {
+    margin: 0 0 0 -20px;
+    border-radius: 0 0 26px 0;
+}
+
+.footbar .instar {
+    border-radius: 28px 0 0 0;
+}
+
+.footbar .star .fa {
+    margin-right: 4px;
+}
+
+.footbar a,
+.widget-small a {
+    text-decoration: none;
+}
+
+.footbar a:hover,
+.widget-small a:hover {
+    text-decoration: underline;
+}
+
+.footbar label.screen-reader-text {
+    position: relative;
+    top: auto;
+    padding: 15px 0;
+    margin: 0;
+    display: block;
+    height: auto;
+    width: calc(100% - 40px);
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+/* Wid Agenda */
+
+.footbar .agenda_widget {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+/* Wid Post */
+
+.footbar .post_widget {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+/* Info Sekolah */
+
+.footbar .widget_sekolah {
+    padding: 20px 0;
+}
+
+/* Wid Video */
+
+.footbar .vid_widbox {
+    padding: 20px 0 0;
+}
+
+.vid_widbox:last-child {
+    padding: 20px 0;
+}
+
+.vid_widin iframe {
+    display: block;
+    width: 100%;
+    height: 180px;
+}
+
+/* Wid Arsip */
+
+.footbar select {
+    width: 100%;
+    font-size: 13px;
+    line-height: 30px;
+    padding: 0 15px;
+    border: 0;
+    font-family: Poppins;
+    appearance: none;
+    border: 1px solid rgba(125, 125, 125, 0.15);
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Wid Search */
+
+.footbar .akademi_search select {
+    border: 0;
+    margin: 0;
+}
+
+.footbar .akademi_search select * {
+    font-family: Poppins;
+}
+
+.footbar .akademi_search {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footbar .akademi_search .ps_input,
+.footbar .akademi_search .ps_select {
+    width: calc(50% - 16px);
+}
+
+.footbar .akademi_search .ps_input input {
+    padding: 0 15px;
+    width: calc(50% - 32px);
+}
+
+/* Wid Galeri */
+
+.footbar .gallery {
+    margin: 0 -5px !important;
+}
+
+.footbar .gallery .gallery-item {
+    float: left;
+    margin: 0 !important;
+    text-align: center;
+}
+
+.footbar .gallery.gallery-columns-1 .gallery-item {
+    width: 100% !important;
+}
+
+.footbar .gallery.gallery-columns-2 .gallery-item {
+    width: 50% !important;
+}
+
+.footbar .gallery.gallery-columns-3 .gallery-item {
+    width: 33.333% !important;
+}
+
+.footbar .gallery.gallery-columns-4 .gallery-item {
+    width: 25% !important;
+}
+
+.footbar .gallery.gallery-columns-6 .gallery-item {
+    width: 16.16777% !important;
+}
+
+.footbar .gallery.gallery-columns-8 .gallery-item {
+    width: 12.5% !important;
+}
+
+.footbar .gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none !important;
+    margin-bottom: 0;
+}
+
+.footbar .gallery .gallery-caption {
+    font-size: 12px;
+    margin: 0 6px 14px;
+}
+
+.footbar .gallery dl {
+    margin: 0;
+}
+
+.footbar .gallery dl dt {
+    margin: 5px;
+}
+
+.footbar .gallery br + br {
+    display: none;
+}
+
+.widget_media_image.footbar img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footbar .wp-caption {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+    max-width: 100%;
+}
+
+.footbar .wp-caption img {
+    margin: 0;
+}
+
+.footbar .wp-caption p.wp-caption-text {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.footbar .wp-smiley {
+    margin: 0;
+}
+
+.footbar.widget_categories ul,
+.footbar.widget_recent_comments ul,
+.footbar.widget_pages ul,
+.footbar.widget_nav_menu ul.menu,
+.footbar.widget_meta ul,
+.footbar.widget_recent_entries ul,
+.footbar.widget_pages ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footbar.widget_archive li,
+.footbar.widget_categories li,
+.footbar.widget_meta li,
+.footbar.widget_nav_menu li,
+.footbar.widget_pages li {
+    line-height: 2.6;
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.footbar.widget_recent_entries li {
+    line-height: 1.4;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_recent_entries .post-date {
+    font-size: 12px;
+}
+
+.footbar.widget_recent_comments li {
+    line-height: 1.4;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_recent_comments .post-date {
+    font-size: 12px;
+}
+
+.footbar .textwidget {
+    padding: 8px 0 0;
+}
+
+.footbar.widget_text ul li {
+    margin: 0 0 0 15px;
+    line-height: 1.6;
+}
+
+/* RSS */
+
+.footbar.widget_rss li {
+    line-height: 1.4;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.15);
+}
+
+.widget_rss .rssSummary {
+    padding: 8px 0 0;
+    font-size: 12px;
+}
+
+.widget_rss cite {
+    padding: 12px 0 0;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    color: #d33;
+}
+
+.widget_rss .rss-date {
+    font-size: 12px;
+}
+
+/* Tag */
+
+.footbar.widget_tag_cloud .tagcloud {
+    padding: 20px 0;
+}
+
+/* Video */
+
+.widget_media_video.footbar {
+    padding: 0 0 20px 0;
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    position: relative;
+    z-index: 10;
+}
+
+.customize-partial-edit-shortcuts-shown .footer {
+    width: calc(100% + 300px);
+}
+
+.footer__copyright {
+    position: relative;
+    padding: 30px 0;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    font-family: Poppins, sans-serif;
+    padding: 0;
+}
+
+.to_top {
+    position: fixed;
+    right: 36px;
+    bottom: 30px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px !important;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    z-index: 101;
+    display: none;
+}
+
+.fade.to_top {
+    display: block;
+}
+
+@media screen and (max-width: 981px) {
+    .open_menu.fa {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        height: calc(100% - 58px);
+        overflow-y: auto;
+        max-width: 400px;
+        background: #fff;
+        position: fixed;
+        top: 58px;
+        z-index: 100;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .nav .dd {
+        margin: 0;
+    }
+
+    .nav .dd.accord li {
+        padding: 0 20px;
+        line-height: 36px;
+        border-top: 1px solid #f7f7f7;
+        position: relative;
+        display: block;
+    }
+
+    .nav .dd.accord li.has-sub:after {
+        content: "\f0dd";
+        font: normal normal 16px/1 FontAwesome;
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        transition: all 0.5s 0.1s ease;
+        transform: rotate(0deg);
+    }
+
+    .nav .dd.accord li.has-sub.active:after {
+        transition: all 0.5s 0.1s ease;
+        transform: rotate(180deg);
+    }
+
+    .nav .dd.accord ul li:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .nav .dd.accord li a {
+        display: block;
+    }
+
+    .nav .dd.accord li ul {
+        display: none;
+        margin: 0 -20px;
+        background: rgba(0, 0, 0, 0.01);
+    }
+
+    .nav .dd.accord li ul li ul {
+        background: rgba(0, 0, 0, 0.006);
+    }
+
+    .outer_top {
+        width: auto;
+        margin-top: 0;
+    }
+
+    .school_box {
+        padding: 20px 30px;
+    }
+
+    .info_box h1 {
+        font-size: 25px;
+    }
+
+    .tab_time {
+        width: 110px;
+    }
+
+    #hours {
+        height: 32px;
+        line-height: 32px;
+        width: 110px;
+        font-size: 23px;
+    }
+
+    .ontime {
+        width: 70px;
+    }
+
+    .akademi_cont {
+        width: 180px;
+        margin: 20px 30px 0 0;
+    }
+
+    .get_photos {
+        padding: 10px;
+        width: 160px;
+    }
+
+    .get_names {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .aka_editorial {
+        width: calc(100% - 210px);
+        height: 255px;
+    }
+
+    .ed_loop {
+        padding: 30px 0 0;
+    }
+
+    .aka_quotes {
+        width: 100%;
+    }
+
+    .akademi_container {
+        padding: 0 20px;
+    }
+
+    .before_blocks {
+        margin: 0;
+    }
+
+    .big_block {
+        width: 100%;
+        float: none;
+    }
+
+    .primary_box,
+    .secondary,
+    .right_block {
+        width: 100%;
+        float: none;
+    }
+
+    .primary_in,
+    .agenda_box,
+    .guru_block,
+    .fasilitas_box,
+    .peng_box,
+    .blog_gurus,
+    .prestasi_box,
+    .ekskul_box,
+    .gall_box,
+    .video_box {
+        margin: 0 0 15px;
+    }
+
+    .gal_thumb {
+        width: 11%;
+    }
+
+    .aka_video {
+        width: calc(33.33% - 30px);
+        float: left;
+    }
+
+    .wa_web {
+        display: none;
+    }
+
+    .wa_mob {
+        display: block;
+    }
+
+    .akademi_sosial a.web_wa {
+        display: none;
+    }
+
+    .akademi_sosial a.mob_wa {
+        display: inline-block;
+    }
+
+    .akademi_singlecontent {
+        margin: 0 -10px;
+    }
+
+    .akademi_primary {
+        width: 100%;
+        float: none;
+    }
+
+    .primary_content {
+        margin: 0 75px 0 10px;
+        padding: 20px 0;
+    }
+
+    .akademi_secondary {
+        width: 100%;
+        float: none;
+    }
+
+    .secondary_content {
+        margin: 0 75px 20px 10px;
+    }
+
+    .share {
+        margin-left: 0;
+        padding: 0;
+        right: 20px;
+    }
+
+    .loop_left,
+    .loop_right {
+        width: 100%;
+        float: none;
+    }
+
+    .loop_akademi {
+        margin: 0 -10px;
+    }
+
+    .loop_guru .post_in {
+        margin: 0 10px;
+    }
+
+    .post_inguru {
+        margin-bottom: 30px;
+    }
+
+    .guru_fullname {
+        font-size: 13px;
+    }
+
+    .stts,
+    .jab {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .guru_meta {
+        height: 75px;
+    }
+
+    .per_tiga,
+    .per_dua {
+        width: 100%;
+        float: none;
+        line-height: 1.5;
+    }
+
+    .primary_content {
+        margin: 0 10px;
+    }
+
+    .people .table_inakademi td.front_bk {
+        width: 100px;
+        padding: 12px 0;
+    }
+
+    .people .table_inakademi td.front_td {
+        width: calc(100% - 100px);
+    }
+
+    .footer__block {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .head_area {
+        padding: 0 20px;
+    }
+
+    .akademi_head {
+        height: auto;
+    }
+
+    .akademi_logo {
+        height: 50px;
+        padding: 20px 20px 20px 0;
+    }
+
+    .akademi_logo img {
+        height: 50px;
+    }
+
+    .akademi_sosial {
+        padding: 25px 0;
+    }
+
+    .akademi_sosial .fa {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 22px;
+        margin: 0 4px 0 0;
+    }
+
+    #akademilider {
+        min-height: auto;
+    }
+
+    .info_box h1 {
+        font-size: 20px;
+    }
+
+    #secs {
+        width: 26px;
+    }
+
+    .tab_time {
+        width: 80px;
+    }
+
+    #hours {
+        width: 80px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 16px;
+    }
+
+    .ontime {
+        width: 52px;
+    }
+
+    .gal_thumb {
+        width: 20%;
+    }
+
+    .loop_download {
+        padding: 20px 15px;
+    }
+
+    .search_something,
+    .result_list {
+        width: 100%;
+        float: none;
+    }
+
+    .down_table {
+        margin: 20px 0 0;
+    }
+
+    .akademi_login,
+    .akademi_kelas,
+    .akademi_materi {
+        width: 100%;
+        float: none;
+    }
+
+    .login_in {
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .akademi_logo {
+        float: none;
+        width: 100%;
+        padding: 20px 0 0;
+        text-align: center;
+    }
+
+    .akademi_sosial {
+        float: none;
+        text-align: center;
+    }
+
+    .akademi_search {
+    }
+
+    .ps_input {
+    }
+
+    .ps_select {
+    }
+
+    .ps_select select {
+    }
+
+    .school_box {
+        padding: 15px 20px;
+    }
+
+    .info_box h1 {
+        font-size: 16px;
+    }
+
+    .tab_time {
+        width: 58px;
+    }
+
+    #hours {
+        width: 58px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .ontime {
+        width: 38px;
+    }
+
+    #secs {
+        width: 20px;
+    }
+
+    .add_box {
+        padding: 0 20px;
+    }
+
+    .get_photos {
+        padding: 8px;
+        width: 120px;
+    }
+
+    .akademi_cont {
+        width: 156px;
+    }
+
+    .aka_editorial {
+        height: 200px;
+        width: calc(100% - 170px);
+    }
+
+    .quotes_loop {
+        padding: 10px 30px 0;
+        font-size: 16px;
+    }
+
+    .before_blocks {
+        padding: 20px 0;
+    }
+
+    .agenda_loop {
+        width: 100%;
+        float: left;
+    }
+
+    .aka_video {
+        width: auto;
+        float: none;
+    }
+
+    .post_inthumb {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px;
+    }
+
+    .post_inmeta {
+        width: 100%;
+        float: none;
+    }
+
+    .loop_guru {
+        width: 33.33%;
+    }
+
+    .akademi_cont {
+        width: 136px;
+        margin: 20px 20px 0 0;
+    }
+
+    .get_names {
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        padding: 45px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .akademi_menu {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .akademi_search {
+        width: calc(100% - 75px);
+    }
+
+    .ps_input {
+        width: calc(55% - 38px);
+    }
+
+    .ps_select {
+        width: 45%;
+    }
+
+    .ps_button {
+        border-left: 6px solid #fff;
+    }
+
+    .add_box {
+        padding: 0 20px;
+    }
+
+    .ed_box span.re_editor {
+        padding: 0 10px;
+        line-height: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .ed_loop {
+        font-size: 13px;
+    }
+
+    .aka_editorial {
+        height: 215px;
+    }
+
+    .quotes_loop {
+        padding: 20px 30px 0;
+        font-size: 16px;
+    }
+
+    .soal_tab .answer {
+        width: 50%;
+    }
+
+    .people .akademi_secondary,
+    .people .akademi_primary {
+        float: none;
+        width: 100%;
+    }
+
+    .guru_table td.dpn {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .akademi_logo {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .akademi_logo img {
+        height: auto;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .akademi_sosial .fa {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 18px;
+    }
+
+    .akademi_sosial {
+        padding: 8px 20px;
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        background: #fff;
+        left: 0;
+        right: 0;
+    }
+
+    .akademi_top,
+    .running,
+    .tickercontainer,
+    .mask {
+        height: 30px;
+    }
+
+    ul.newstickers li {
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .sekilas,
+    .akademi_today {
+        display: none;
+    }
+
+    .akademi_bread {
+        padding: 20px;
+    }
+
+    .breadcrumbs {
+        font-size: 12px;
+    }
+
+    .to_top {
+        right: 20px;
+        bottom: 8px;
+        width: 32px;
+        height: 32px;
+        line-height: 32px !important;
+        font-size: 15px;
+    }
+
+    .get_photos {
+        width: 100px;
+    }
+
+    .akademi_cont {
+        width: 116px;
+    }
+
+    .aka_editorial {
+        width: calc(100% - 140px);
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .ed_loop {
+        padding: 20px 0 0;
+    }
+
+    .akademi_heading {
+        font-size: 20px;
+    }
+
+    .primary_content {
+        margin: 0 10px 20px;
+    }
+
+    .secondary_content {
+        margin: 0 10px 20px;
+    }
+
+    .share,
+    .fade .share {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        right: auto;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .share .fa {
+        font-size: 16px;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        margin: 0 5px 10px 0;
+        border-radius: 5px;
+        overflow: hidden;
+        float: left;
+    }
+
+    .share .fa-share-alt {
+        line-height: 26px;
+    }
+
+    .share .fa-share-alt:after {
+        bottom: -6px;
+        width: 34px;
+    }
+
+    .after_title {
+        font-size: 12px;
+    }
+
+    .akademi_article {
+        font-size: 13px;
+    }
+
+    .akademi__post {
+        padding: 30px 0;
+    }
+
+    .akademi__post .fa-commenting-o {
+        width: 38px;
+        height: 38px;
+        margin-right: 20px;
+        line-height: 38px;
+        font-size: 20px;
+    }
+
+    .have_comment {
+        width: calc(100% - 60px);
+        font-size: 12px;
+    }
+
+    .comment_heads {
+        font-size: 16px;
+    }
+
+    .heading_list_comment {
+        font-size: 18px;
+        padding: 0 0 10px;
+        margin: 0 0 10px;
+    }
+
+    #comment {
+        font-size: 12px;
+    }
+
+    #respond .akademi__form-author,
+    #respond .akademi__form-email,
+    #respond .akademi__form-url {
+        margin-bottom: 10px;
+    }
+
+    #author,
+    #email,
+    #url {
+        padding: 5px 14px;
+        font-size: 12px;
+    }
+
+    #comments {
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+
+    #respond p.form-submit #submit {
+        font-size: 12px;
+    }
+
+    .akademi__post {
+        padding: 20px 0;
+    }
+
+    .single_vid {
+        height: 200px;
+    }
+
+    .age_arsip {
+        width: 60px;
+    }
+
+    .agedate {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .agemonth {
+        font-size: 8px;
+    }
+
+    .post_inmeta.age_meta {
+        width: calc(100% - 75px);
+    }
+
+    .age_single.age_top {
+        padding: 8px;
+        font-size: 10px;
+        margin: 0;
+        height: 29px;
+    }
+
+    .post_inpublish,
+    .after_title {
+        font-size: 10px;
+    }
+
+    .age_meta h1.akademi_heading {
+        padding-top: 12px;
+        margin-left: -75px;
+    }
+
+    .age_single {
+        margin-left: -75px;
+        padding: 8px 0;
+    }
+
+    .singmeta {
+        padding: 15px;
+    }
+
+    .content_meta {
+        font-size: 13px;
+        margin: 0 0 10px;
+    }
+
+    .aka_tags {
+        margin: 0 0 10px;
+        padding: 0 0 10px;
+    }
+
+    .aka_tags a {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .loop_meta {
+        padding: 10px 0;
+    }
+
+    .loop_meta h4 {
+        font-size: 14px;
+    }
+
+    .loop_meta span {
+        font-size: 12px;
+    }
+
+    .comment__avatar {
+        margin: 0 15px 0 0;
+    }
+
+    .comment__meta {
+        width: calc(100% - 92px);
+        margin-bottom: 10px;
+        padding: 10px 15px 10px;
+    }
+
+    .children,
+    .children .children {
+        margin-left: 15px;
+    }
+
+    .comment__avatar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .akademi_heading {
+        padding: 20px 0;
+    }
+
+    .loop_akademi {
+        padding: 15px 0;
+    }
+
+    .post_in {
+        margin: 0 0 20px;
+    }
+
+    .post-category {
+        margin: 0 0 10px;
+    }
+
+    .post-category a {
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        padding: 0 8px;
+    }
+
+    .post_in h2 {
+        font-size: 20px;
+    }
+
+    .post_inexcerpt {
+        font-size: 13px;
+    }
+
+    .pagination .disabled,
+    .pagination a,
+    .pagination a.nextpostslink,
+    .pagination a.previouspostslink {
+        height: 28px;
+        width: 28px;
+        line-height: 28px;
+    }
+
+    .loop_guru {
+        width: 50%;
+    }
+
+    .post_inguru .fa {
+        border-width: 4px !important;
+    }
+
+    .post_inguru .fa {
+        bottom: -19px;
+        margin-left: -19px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .post_inguru {
+        margin-bottom: 22px;
+    }
+
+    .guru_fullname {
+        margin: 0;
+    }
+
+    .loop_download {
+        font-size: 13px;
+    }
+
+    .some_input,
+    .some_result,
+    .head_cat {
+        padding: 10px 15px;
+    }
+
+    .some_cat .cat_term a {
+        padding: 15px 15px;
+    }
+
+    .akademi_table td {
+        padding: 10px 15px;
+    }
+
+    .inform {
+        max-width: auto;
+    }
+
+    .kelas_head .to_materi {
+        margin-bottom: 15px;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 8px;
+        font-size: 12px;
+    }
+
+    .tugas_term {
+        line-height: 34px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .tugas_term span {
+        margin: 6px 0;
+    }
+
+    .materi_box {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .materi_box h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+
+    .soal_kumpulan {
+        padding: 10px 0;
+    }
+
+    .det_materi h4 {
+        font-size: 18px;
+    }
+
+    .per_count {
+        font-size: 25px;
+    }
+
+    .per_span {
+        font-size: 10px;
+    }
+
+    .per_materi {
+        width: 60px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .det_materi {
+        width: calc(100% - 75px);
+        padding-bottom: 15px;
+    }
+
+    .mat_author {
+        padding-top: 5px;
+    }
+
+    .pagination {
+        padding: 10px 0;
+    }
+
+    .footer__copyright {
+        padding: 30px 0 80px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .akademi_logo {
+        padding: 10px 0;
+    }
+
+    .ps_select select,
+    .ps_input input {
+        font-size: 12px;
+    }
+
+    .akademi_top,
+    .running,
+    .tickercontainer,
+    .mask {
+        height: 26px;
+    }
+
+    ul.newstickers li {
+        height: 14px;
+        line-height: 14px;
+    }
+
+    .info_box h1 {
+        font-size: 12px;
+        padding: 3px 15px 3px 0;
+    }
+
+    #hours {
+        height: 20px;
+        line-height: 19px;
+        font-size: 12px;
+        letter-spacing: 0px;
+        width: 58px;
+    }
+
+    #secs {
+        width: 20px;
+    }
+
+    .ontime {
+        width: 38px;
+    }
+
+    .aka_editorial {
+        width: calc(100% - 136px);
+        height: 146px;
+    }
+
+    .akademi_cont {
+        margin-top: 15px;
+    }
+
+    .ed_loop {
+        font-size: 12px;
+    }
+
+    .ed_box span {
+        padding: 0 6px;
+        line-height: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .quotes_loop {
+        padding: 20px 0 0;
+        font-size: 14px;
+    }
+
+    .school_box {
+        padding: 15px;
+    }
+
+    .add_box {
+        padding: 0 15px;
+    }
+
+    .akademi_container {
+        padding: 0 15px;
+    }
+
+    .news_overlay {
+        padding: 230px 15px 15px;
+        font-size: 12px;
+    }
+
+    .news h4 {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .top_icon {
+        font-size: 13px;
+    }
+
+    .age_date {
+        width: 65px;
+    }
+
+    .eventdate {
+        font-size: 28px;
+    }
+
+    .eventmonth {
+        font-size: 9px;
+    }
+
+    .gal_thumb {
+        width: 25%;
+    }
+
+    .soal_tab .answer {
+        width: 100%;
+        float: none;
+    }
+
+    .soal_tab .ask,
+    .soal_tab .answer {
+        font-size: 13px;
+    }
+
+    .materi_outer {
+        padding: 0 0 15px 0;
+    }
+
+    .people .table_inakademi td {
+        font-size: 13px;
+        padding: 8px 20px 8px 0;
+    }
+
+    .people .secondary_content {
+        margin: 15px 10px;
+    }
+
+    .guru_table td {
+        font-size: 13px;
+        padding: 8px 20px 8px 0;
+    }
+
+    .per_tiga {
+        line-height: 2;
+    }
+
+    .akademi_featured {
+        position: relative;
+        width: 60%;
+        margin: 0 auto;
+        padding: 15px 0 0;
+    }
+}

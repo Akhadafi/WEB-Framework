@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}{{judul}}{% endblock title %}
+{% block content %}
+<h1>{{judul}}</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo cumque ad quos ullam facilis aliquam natus, atque nobis sit animi laborum sequi incidunt quam ipsum, commodi quia unde nihil eum.</p>
+<form action="" method="post">
+    {% csrf_token %}
+    <button type="submit">POST</button>
+</form>
+{% endblock content %}
